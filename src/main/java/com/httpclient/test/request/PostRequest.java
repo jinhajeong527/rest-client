@@ -17,6 +17,7 @@ public class PostRequest {
     }
 
     public static void httpPostRequest() throws URISyntaxException, IOException, InterruptedException {
+        
         String requestBody = PostAndPutRequestBody.makeProductPayloadToJson();
         
         HttpClient client = HttpClient.newHttpClient();

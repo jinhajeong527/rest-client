@@ -11,7 +11,7 @@ import java.net.http.HttpResponse.BodyHandlers;
 
 public class DeleteRequest {
     public static void main(String[] args) throws URISyntaxException, IOException, InterruptedException {
-        httpDeleteRequest(1);
+        httpDeleteRequest(10); //존재하지 않는 상품 번호로 삭제 시도할 때 
     }
 
     public static void httpDeleteRequest(Integer productId) throws URISyntaxException, IOException, InterruptedException {

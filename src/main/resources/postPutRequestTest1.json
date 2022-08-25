@@ -1,0 +1,13 @@
+{
+    "product" : {
+
+        "productType": "APM",
+        "name": "K8S APP",
+        "minCpu": 0.1,
+        "chargeUnit": "CORE"
+
+},
+    "priceHistory": {
+        "price": 25000.00
+    }
+}

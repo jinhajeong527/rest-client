@@ -14,6 +14,9 @@ import com.httpclient.test.data.PostAndPutRequestBody;
 
 
 public class PutRequest {
+    public static void main(String[] args) throws URISyntaxException, IOException, InterruptedException {
+        httpPutRequest(10);
+    }
 
     public static void httpPutRequest(Integer productId) throws URISyntaxException, IOException, InterruptedException {
         String requestBody = PostAndPutRequestBody.makeProductPayloadToJson();

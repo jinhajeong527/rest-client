@@ -1,0 +1,14 @@
+{
+    "product" : {
+
+        "productType": "존재하지 않는 제품 타입",
+        "name": "K8S APP",
+        "minCpu": 0.1,
+        "chargeUnit": "CORE"
+
+    },
+    "priceHistory": {
+        "price": 25000.00
+    }
+     
+}

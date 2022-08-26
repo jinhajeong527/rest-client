@@ -2,7 +2,7 @@
     "product" : {
 
         "productType": "APM",
-        "name": "K8S APP",
+        "name": "Application",
         "minCpu": 0.1,
         "chargeUnit": "CORE"
 

@@ -10,11 +10,7 @@ import java.net.http.HttpResponse.BodyHandlers;
 
 
 public class DeleteRequest {
-    public static void main(String[] args) throws URISyntaxException, IOException, InterruptedException {
-        httpDeleteRequest(10); //존재하지 않는 상품 번호로 삭제 시도할 때 
-    }
-
-    public static void httpDeleteRequest(Integer productId) throws URISyntaxException, IOException, InterruptedException {
+    public HttpResponse<String> httpDeleteRequest(Integer productId) throws URISyntaxException, IOException, InterruptedException {
 
 		HttpClient client = HttpClient.newHttpClient();
         
@@ -26,8 +22,6 @@ public class DeleteRequest {
                             .build();
 			
         HttpResponse<String> response = client.send(request, BodyHandlers.ofString());
-
-        System.out.println("httpGetRequest : " + response.body());
-        System.out.println("httpGetRequest Status Code : " + response.statusCode());
+        return response;
     }
 }

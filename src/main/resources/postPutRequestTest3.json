@@ -1,13 +1,9 @@
 {
-    "product" : {
-
-        "productType": "TestProductType",
-        "name": "K8S APP",
-        "minCpu": 0.1,
-        "chargeUnit": "CORE"
-
-    },
-    "priceHistory": {
-        "price": 25000.00
-    } 
+   
+    "productType": "TestProductType",
+    "name": "K8S APP",
+    "minCpu": 0.1,
+    "chargeUnit": "CORE",
+    "price": 25000.00
+    
 }

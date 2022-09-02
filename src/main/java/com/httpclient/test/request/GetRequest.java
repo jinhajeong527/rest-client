@@ -12,10 +12,6 @@ import org.springframework.stereotype.Component;
 
 @Component
 public class GetRequest {
-    public static void main(String[] args) throws URISyntaxException, IOException, InterruptedException {
-        //httpGetRequest();
-        httpGetRequest("0", "3", "createDate,desc");
-    }
     
     public static void httpGetRequest() throws URISyntaxException, IOException, InterruptedException {
 

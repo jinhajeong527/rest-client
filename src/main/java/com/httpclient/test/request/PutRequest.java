@@ -9,17 +9,14 @@ import java.net.http.HttpResponse;
 import java.net.http.HttpRequest.BodyPublishers;
 import java.net.http.HttpResponse.BodyHandlers;
 
-
-import com.httpclient.test.data.PostAndPutRequestBody;
+import com.fasterxml.jackson.databind.ObjectMapper;
+import com.httpclient.test.dto.ProductPayload;
 
 
 public class PutRequest {
-    public static void main(String[] args) throws URISyntaxException, IOException, InterruptedException {
-        httpPutRequest(10);
-    }
-
-    public static void httpPutRequest(Integer productId) throws URISyntaxException, IOException, InterruptedException {
-        String requestBody = PostAndPutRequestBody.makeProductPayloadToJson();
+    public HttpResponse<String> httpPutRequest(Integer productId, ProductPayload productPayload) throws URISyntaxException, IOException, InterruptedException {
+        ObjectMapper objectMapper = new ObjectMapper();
+        String requestBody = objectMapper.writeValueAsString(productPayload);
 
         HttpClient client = HttpClient.newHttpClient();
 
@@ -30,9 +27,9 @@ public class PutRequest {
                             .build();
 
         HttpResponse<String> response = client.send(request, BodyHandlers.ofString());
+
+        return response;
         
-        System.out.println("httpGetRequest : " + response.body());
-        System.out.println("httpGetRequest Status Code : " + response.statusCode());
     }
     
 }

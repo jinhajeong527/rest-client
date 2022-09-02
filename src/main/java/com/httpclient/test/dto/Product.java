@@ -8,6 +8,8 @@ public class Product {
     private Float minCpu;
     private String chargeUnit;
     private String productType;
+    private String createDate;
+    private String updateDate;
 
     public Product() {
     }
@@ -58,4 +60,24 @@ public class Product {
     public void setProductType(String productType) {
         this.productType = productType;
     }
+
+    public String getCreateDate() {
+        return createDate;
+    }
+
+    public void setCreateDate(String createDate) {
+        this.createDate = createDate;
+    }
+
+    public String getUpdateDate() {
+        return updateDate;
+    }
+
+    public void setUpdateDate(String updateDate) {
+        this.updateDate = updateDate;
+    }
+
+    
+
+    
 }

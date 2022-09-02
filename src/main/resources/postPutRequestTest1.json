@@ -1,13 +1,7 @@
-{
-    "product" : {
-
-        "productType": "APM",
-        "name": "Application",
-        "minCpu": 0.1,
-        "chargeUnit": "CORE"
-
-},
-    "priceHistory": {
-        "price": 25000.00
-    }
+{   
+    "productType": "APM",
+    "name": "Application",
+    "minCpu": 0.1,
+    "chargeUnit": "CORE",
+    "price": 25000.00
 }

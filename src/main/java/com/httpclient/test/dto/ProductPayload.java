@@ -1,21 +1,55 @@
 package com.httpclient.test.dto;
 
+import java.math.BigDecimal;
+
 public class ProductPayload {
     
-    private Product product;
-    private PriceHistory priceHistory;
+    String productType;
+    String name;
+    Float minCpu;
+    String chargeUnit;
+    BigDecimal price;
+    
+    public ProductPayload() {
+    }
+    public ProductPayload(String productType, String name, Float minCpu, String chargeUnit, BigDecimal price) {
+        this.productType = productType;
+        this.name = name;
+        this.minCpu = minCpu;
+        this.chargeUnit = chargeUnit;
+        this.price = price;
+    }
+    public String getProductType() {
+        return productType;
+    }
+    public void setProductType(String productType) {
+        this.productType = productType;
+    }
+    public String getName() {
+        return name;
+    }
+    public void setName(String name) {
+        this.name = name;
+    }
+    public Float getMinCpu() {
+        return minCpu;
+    }
+    public void setMinCpu(Float minCpu) {
+        this.minCpu = minCpu;
+    }
+    public String getChargeUnit() {
+        return chargeUnit;
+    }
+    public void setChargeUnit(String chargeUnit) {
+        this.chargeUnit = chargeUnit;
+    }
+    public BigDecimal getPrice() {
+        return price;
+    }
+    public void setPrice(BigDecimal price) {
+        this.price = price;
+    }
 
-    public Product getProduct() {
-        return product;
-    }
-    public void setProduct(Product product) {
-        this.product = product;
-    }
-    public PriceHistory getPriceHistory() {
-        return priceHistory;
-    }
-    public void setPriceHistory(PriceHistory priceHistory) {
-        this.priceHistory = priceHistory;
-    }
+    
     
 }

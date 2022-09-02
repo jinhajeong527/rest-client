@@ -11,27 +11,25 @@ import java.net.http.HttpResponse.BodyHandlers;
 
 import com.httpclient.test.data.PostAndPutRequestBody;
 
-public class PostRequest {
-    public static void main(String[] args) throws URISyntaxException, IOException, InterruptedException {
-        httpPostRequest();
-    }
 
-    public static void httpPostRequest() throws URISyntaxException, IOException, InterruptedException {
+
+public class PostRequest {
+    public HttpResponse<String> httpPostRequest(int testNumber) throws URISyntaxException, IOException, InterruptedException {
         
-        String requestBody = PostAndPutRequestBody.makeProductPayloadToJson();
+        String requestBody = PostAndPutRequestBody.makeProductPayloadToJson(testNumber);
         
         HttpClient client = HttpClient.newHttpClient();
-
+        
         HttpRequest request = HttpRequest.newBuilder(new URI("http://localhost:8081/api/product"))
                             .version(HttpClient.Version.HTTP_2)
                             .POST(BodyPublishers.ofString(requestBody))
                             .header("Content-Type", "application/json")
                             .build();
-
+        System.out.println("POST 요청을 시작합니다");
         HttpResponse<String> response = client.send(request, BodyHandlers.ofString());
 
-        System.out.println("httpGetRequest : " + response.body());
-        System.out.println("httpGetRequest Status Code : " + response.statusCode());
+        return response;
+
     }
 
     

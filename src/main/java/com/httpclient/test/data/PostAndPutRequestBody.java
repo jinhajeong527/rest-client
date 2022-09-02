@@ -11,10 +11,10 @@ import com.httpclient.test.dto.ProductPayload;
 
 public class PostAndPutRequestBody {
 
-    public static String makeProductPayloadToJson() throws MalformedURLException, IOException {
+    public static String makeProductPayloadToJson(int testNumber) throws MalformedURLException, IOException {
         ObjectMapper objectMapper = new ObjectMapper();
         ProductPayload productPayload = 
-            objectMapper.readValue(new URL("file:src/main/resources/postPutRequestTest1.json"), ProductPayload.class);
+            objectMapper.readValue(new URL("file:src/main/resources/postPutRequestTest"+testNumber+".json"), ProductPayload.class);
         String requestBody = objectMapper.writeValueAsString(productPayload);
         return requestBody;
     }
